@@ -1,0 +1,77 @@
+
+---------------------------------------------------------
+https://github.com/VijayPatil1602/devops-master-class
+
+https://github.com/VijayPatil1602/devops-master-class/tree/master/kubernetes
+
+https://hub.docker.com/u/in28min
+
+
+terraform installation instruction
+https://cloudkatha.com/how-to-install-terraform-on-windows-system/#:~:text=Step%201%3A%20Download%20Terraform%20Binary%20Package%20Navigate%20to,choose%20386%20if%20your%20system%20is%2032%20bits.
+
+-------------------------------------------------------
+
+AWS terraform 
+
+--- prerequisites
+   1. AWS Account
+   2. Visual Studio Code
+   3. Terraform installation -- search for install terraform
+
+ * TerraForm is an ICC tool, infrastructure ask code tool.
+ * TerraForm is typically used to provisioned resources on the cloud.
+ * You can provision virtual servers, you can provisioned load balancers, you can
+   provision storage, you can provision databases.
+ * Typically, TerraForm is used to do server provisioning.
+ * TerraForm also provides a few basic features to do so with configuration,
+   but typically the best practice is to use TerraForm for server provisioning.
+ * 
+
+
+After installation in cmd hit
+-------https://cloudkatha.com/how-to-install-terraform-on-windows-system/#:~:text=Step%201%3A%20Download%20Terraform%20Binary%20Package%20Navigate%20to,choose%20386%20if%20your%20system%20is%2032%20bits.
+
+
+	* terraform --version
+	* terraform init ( in cmd go to the folder where .tf file is present and then
+				hit this cmd. it will install platform plugin )
+	* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

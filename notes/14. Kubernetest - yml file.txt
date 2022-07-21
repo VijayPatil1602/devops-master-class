@@ -1,0 +1,103 @@
+
+---------------------------------------------------------
+https://github.com/VijayPatil1602/devops-master-class
+
+https://github.com/VijayPatil1602/devops-master-class/tree/master/kubernetes
+
+https://hub.docker.com/u/in28min
+
+-------------------------------------------------------
+
+
+Kubernetes : it is nothing but a group of servers that are managed together, and you
+	     are now connected to the cluster. we don't really need to worry about
+	     monitoring the application. Kubernetes does it for you. It has automatic
+	     load balancer. If you want 3 instances then kubernetes will try to 
+	     ensure that there are three instances always running. even if one of the
+	     instances goes down, kubernetes does all it can do to bring another
+	     instance up within a few seconds, you will see that the third instance
+	     is up and running as well.
+
+
+
+Google Kuvernetes Engine (GKE) on Google Cloud Platform (GCP)
+GKE is a managed service provided by GCP. so, google cloud platform provides this
+managed service called the google kubernetes engine.
+
+
+look into kubernetes folder in deops-master-class folder
+			       --------------------------
+Generate YML file:>				
+
+	* cd /path of kubernetes/01-hello-world-rest-api
+	* kubectl get deployment hello-world-rest-api
+	* kubectl get deployment hello-world-rest-api -o yaml
+	* kubectl get deployment hello-world-rest-api -o yaml > deployment.yaml (created automatically )
+	* kubectl get service hello-world-rest-api -o yaml > service.yml (created automatically )
+	* pwd
+	* kubectl apply -f deployment.yaml
+	* kubectl get pods
+	* kubectl get all
+	* kubectl delete service (name of the service)
+	* kubectl delete deployment (name of the deployment)
+	* kubectl get all -o wide
+	* kubectl delete all -l(label) app=hello-world-rest-api(name of the lable)
+	* kubectl get all
+	* kubectl apply -f deployment.yaml ( to deploy application using deployment.yaml file )
+	* kubectl diff -f deployment.yaml
+	* kubectl get pods
+
+
+Top, Node and Pod kubernetes commands :>
+
+	* kubectl get pods --all-namespaces
+	* kubectl get pods --all-namespaces -l app=hello-world-rest-api
+	* kubectl get services --all-namespaces
+	* kubectl get services --all-namespaces --sort-by=.spec.type
+	* kubectl get services --all-namespaces --sort-by=.metadata.name
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

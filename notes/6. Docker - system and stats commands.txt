@@ -1,0 +1,62 @@
+
+We going to look into system and stats commands 
+
+
+In cmd or terminal : 
+
+	* docker system (if you type this cmd , you will get an error )
+	
+	        df - show docker disk usage
+		events - Get real time events from the server
+		info - Display system-wide information
+		prune - remove unused data
+
+	* docker system df
+	* docker system events ( show us the run time events )
+
+	* docker system prune -a(all unused) ( remove unused data )
+
+
+****** stats commands
+
+	* docker stats ( will to show how much memory storage are
+			being used and all by container)	
+    (OR)* docker stats (id of the container )
+	
+	* docker container stop (id of container)
+
+***** We can also configure how much CPU, and how much memory that particular
+	container can use by using (-m)=memory in run command:
+
+	* docker container run -d -p 5000:5000 -m(memory) 512m(mega bytes)
+		in28min/hello-world-java:0.0.1.RELEASE
+
+***** How much CPU you want to assign
+	--cpu-quota=100%=100000, 50% = 50000
+
+	* docker container run -d -p 5000:5000 -m(memory) 512m(mega bytes)
+		 --cpu-quota=50000  in28min/hello-world-java:0.0.1.RELEASE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

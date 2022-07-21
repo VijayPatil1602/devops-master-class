@@ -1,0 +1,73 @@
+
+---------------------------------------------------------
+https://github.com/VijayPatil1602/devops-master-class
+-------------------------------------------------------
+
+check the projets folder in 
+
+	/devops-master-class-master/projets/
+		there are java, nodejs, python simple projets
+
+
+
+
+What is Microservices >  
+	* Small automonous services that work together.
+	* In short, the microservice architectural style is an approach to 
+	  developing a single application as a suite of small services, each running
+	  in its own process and communicating with lightweight mechanisms, often an
+	  HTTP resource API.
+	* These services are built arount business capabilities and independently
+ 	  deployable by fully automated deployment machinery..
+	* There is a bare minimum of centralized management of these services, which
+	  may be written in different programming languages and use different data
+	  storage technologies..
+
+
+MICROSERVICES :> microservices are basically services which are exposed by REST.
+		 In addition to that, you have small deployable units with very well
+		 thought-out boundaries. Small well chosen deployable units and these
+		 should be cloud enabled.
+
+
+Advantages of Microservices :>
+
+	* The most important advantage of the microservice architecture is that it 
+	  enables you to adapt new technology and processes very easily.
+	* When we build applications as a combination of microservices, which can 
+	  communicate with each other using simple messages, each of these microservices
+	  can be built in different technologies.
+	* microservices is dynamic scaling.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

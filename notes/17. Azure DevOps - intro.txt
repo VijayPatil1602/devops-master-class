@@ -1,0 +1,62 @@
+
+---------------------------------------------------------
+https://github.com/VijayPatil1602/devops-master-class
+
+https://github.com/VijayPatil1602/devops-master-class/tree/master/kubernetes
+
+https://hub.docker.com/u/in28min
+
+-------------------------------------------------------
+
+
+Getting started with Continuous Integration, Deployment and Delivery
+
+
+Code Commit ---> Unit Test ---> Code Quality ---> Package ---> Integration Tests
+
+
+Git 
+	username - harshmpatil2003
+	pass - jbgwt6rvwb6jxkp3z2eekvnkrdoozaoy6zogt5yizkzqb4jbvqyq
+
+--- Prerequisites :>
+   Azure Account
+   Visual Studio Code
+   Section : Docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

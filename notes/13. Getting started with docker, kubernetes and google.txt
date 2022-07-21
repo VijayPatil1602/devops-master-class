@@ -1,0 +1,164 @@
+
+---------------------------------------------------------
+https://github.com/VijayPatil1602/devops-master-class
+
+https://github.com/VijayPatil1602/devops-master-class/tree/master/kubernetes
+
+https://hub.docker.com/u/in28min
+
+-------------------------------------------------------
+
+
+Kubernetes : it is nothing but a group of servers that are managed together, and you
+	     are now connected to the cluster. we don't really need to worry about
+	     monitoring the application. Kubernetes does it for you. It has automatic
+	     load balancer. If you want 3 instances then kubernetes will try to 
+	     ensure that there are three instances always running. even if one of the
+	     instances goes down, kubernetes does all it can do to bring another
+	     instance up within a few seconds, you will see that the third instance
+	     is up and running as well.
+
+
+
+Google Kuvernetes Engine (GKE) on Google Cloud Platform (GCP)
+GKE is a managed service provided by GCP. so, google cloud platform provides this
+managed service called the google kubernetes engine.
+
+
+* Kubernetes Cluster : 
+	in Google Create Kubernetes cluster and in cluster launch google cloud shell
+
+	* kubectl is an awesome kubernetes command to interact with the cluster.
+	  the kubectl would work with any kubernetes cluster, irrespective of whether
+	  the cluster is in your local machine, whether it's in your datacenter, or
+	  it's in the cloud. once you connet to the cluster, you can execute commands
+	  against any cluster using kubctl. kubctl can do a lot of powerful things for
+	  you with kubernetes. you want to deploy a new application, kubectl. 
+	  you want to increase the number of instances of an application, kubectl.
+	  you want to deploy new version of application, kubectl.
+
+	* kubectl version
+	* kubectl create deployment hello-world-rest-api --image=in28min/hello-world
+	  -rest-api:0.0.1.RELEASE   ( to deploye a application in kubernetes cluster )
+	* kubectl create deployment hello-world-rest-api ( name that we providing it) 
+	  --image=in28min/hello-world-rest-api:0.0.1.RELEASE  (this is the 
+		docker image for the REST api that we want to deploy or docker
+		image)
+	  ( to deploye a application in kubernetes )
+
+	* kubectl expose deployment hello-world-rest-api --type=LoadBalacer 
+	    --port=8080 ( expose the service to the outside world )
+
+
+** Kubernetes Concepts :> Node, Pods, Replica Sets, Deployment and Service
+
+-------- Kubernetes Node Contains ( Multiple Pods -- One pod contains ( Multiple 
+		containers ) )
+
+	* kubectl get events
+	* kubectl get pods ( this would get all the pods which was created,)
+	* kubectl get replicaset ( this would get all the replicaset which was created)
+	* kubectl get deployment
+	* kubectl get service
+
+
+** Pods :>
+
+	   pods is the most important concept in the kubernetes, pod is the smallest
+	deployable unit in kubernetes. A pod is nothing but a wrapper for a set of
+	containers. A pos has an IP address and it has things like labels, annotations
+	and stuff like that.
+
+	* kubectl get pods -o wide
+
+	  ( here you can see each pod has a unique IP address. A pod can actually
+	    contain multiple containers. All the containers which are present in the
+	    pod share resources. within a same pod, container can talk to each other
+	    using localhost. )
+
+	* kubectl explain pods	
+	* kubectl get pods
+	* kubectl describe pod hello-world-rest-api-(id of the pod )
+	* kubectl delete pods ( id of pod that we want to delete )
+
+
+** ReplicaSets :> 
+
+	   replicasets ensure that a specific number of pods are running at all time.
+	replicasets always keeps monitoring the pods and it there are number of pods
+	than what is needed, then it creates the pods. replicaset is always tied with
+	a specific release version.
+
+	* kubectl get replicasets
+	* kubectl get replicaset
+	* kubectl get rs (replicaset)
+	* kubectl get pods -o wide
+	* kubectl delete pods ( id of pod that we want to delete )
+	* kubectl scale deployment hello-world-rest-api --replicas=3
+	* kubectl get pods
+	* kubectl get events
+	* kubectl get events --sort-by=.metadata.creationTimestamp
+	* kubeclt explain replicaset
+
+
+** Deployment :> 
+	   when we want to deploy new version of the image like (hello-world-rest-api)
+	A deployment ensures that a release upgrade, a switch from one version to 
+	another happens without a hitch. we don't really want to have downtimes when
+	we released new versions of applications and that's where deployment plays
+	a key role.
+	
+	* kubectl set image deployment hello-world-rest-api	
+	  hello-world-rest-api(container name)=DUMMY_IMAGE:TEST(invalid image state)
+	* kubectl get rs -o wide
+	* kubectl get pods
+	* kubectl set image deployment hello-world-rest-api	
+	  hello-world-rest-api(container name)=in28min/hello-world-rest-api:0.0.2.
+	  RELEASE(repository release in docker hub)
+	* kubectl get pods
+	* kubectl get rs
+
+
+** Service :>
+
+	* kubectl get pods -o wide
+	* kubectl delete pod (id of pod)
+	* kubectl get services
+
+
+
+
+
+
+
+** Rollout :>
+
+	* kubectl rollout history deployment hello-world-rest-api
+	* kubectl set image deployment hello-world-rest-api 
+	  hello-world-rest-api(docker container name)=in28min/hello-world-rest-api:
+	  0.0.3.RELEASE --record=true
+	* kubectl rollout history deployment hello-world-rest-api
+	* kubectl rollout undo deployment hello-world-rest-api
+	  --to-revision=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

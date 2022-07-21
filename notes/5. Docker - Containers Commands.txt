@@ -1,0 +1,45 @@
+
+
+When we run Images then the runnable or executation file is container
+
+one image can have multiple containers
+
+In cmd : 
+	* docker run -p 5000:5000 repository name
+	* docker run -d(dispatch) -p(publish) 5000(host port): 5000(container port)
+		in28min/hello-world-java:0.0.1.RELEASE (repository name)
+
+	* docker container run -d(dispatch) -p(publish) 5000(host port): 5000(container port)
+		in28min/hello-world-java:0.0.1.RELEASE (repository name)
+
+
+	* docker container run -p 5000:5000 repo name
+
+	* docker container ls -a (return all the containers, irrespective of their 
+			status, as shows both the exited and the running containers. )
+
+	* docker container pause (id of the container // to pause the container)
+	* docker container unpause (id of the container // to unpause the container )
+
+	* docker container stop (id of the contanier // to stop the container )
+	
+	* docker container logs
+	* docker contanier logs -f (id of the container )
+
+	* docker container kill (id of the container // to kill the container )
+
+	* docker container inspect (id of the container  this command will show us
+		the details about the container)
+
+
+
+
+
+
+
+
+
+
+
+
+

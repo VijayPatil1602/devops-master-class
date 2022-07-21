@@ -1,0 +1,104 @@
+
+---------------------------------------------------------
+https://github.com/VijayPatil1602/devops-master-class
+-------------------------------------------------------
+
+check the projets folder in 
+
+	/devops-master-class-master/projets/
+		there are java, nodejs, python simple projets
+
+
+cmd --> in cmd or terminal , select project folder then hit to build image
+
+	* docker build -t ( tag ) in28min/hello-world-nodejs:0.0.2.RELEASE . (Current folder)
+        * docker build -t in28min/hello-world-nodejs:0.0.2.RELEASE .
+        * docker run -p 5000:5000 -d in28min/hello-world-nodejs:0.0.2.RELEASE
+        * docker logs -f (id of the container)
+
+
+**** push the build image to docker hub
+
+	* docker push in28min(docker id)/hello-world-nodejs(project name):0.0.2.RELEASE
+	* docker push in28min/hello-world-nodejs:0.0.2.RELEASE
+
+
+-----------------------------------------------------------------
+
+
+FROM node:8.16.1-alpine
+WORKDIR /app
+COPY . /app
+RUN npm install
+EXPOSE 5000
+CMD node index.js
+
+#ENTRYPOINT ["node", "index.js"]
+#COPY package.json /app
+
+
+------------------------for node js ------------------------------
+
+
+# this is the base image
+FROM node:8.16.1-alpine  //// now here we want to start with a image which already 
+			   contains node js in it, and we are using node 8 here.
+			   this alpine in here is a specific version of Linux which
+			   is really really good to use with docker images. this is not
+			   the complete version of linux, This is a toned down version
+			   of linux which is very very small in size, and which can be
+			   used to build your Docker image.
+
+
+# working directory for specific application
+WORKDIR /app    ////  this is the working directory. which going to be created by 
+		      docker
+
+
+
+# for copying the code
+COPY . /app     ////  this line copy the code to working directory(app). and in this case
+		      code is available in same folder to we add ( . ) here.
+		      this means like copy all the files form the current directory,
+		      from the . directory, to the /app folder
+
+
+
+# to run this application we need this line
+RUN npm install    /////  we would need to download and install
+			  dependencies, and the most popular tool to 
+   		          manage dependencies.
+   
+
+
+EXPOSE 5000        ////  we want expose the port 4000. As we looked at earlier i launch
+			 that by we are exposing on port 5000 to the outside word.
+
+
+
+CMD node index.js    ///// here we would want to launch up the node js application
+				so all that we're doing is saying run node
+				index.js
+
+#COPY requirements.txt /app/requirements.txt
+#ENTRYPOINT ["python", "./launch.py"]
+
+---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

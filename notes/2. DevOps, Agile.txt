@@ -1,0 +1,35 @@
+
+-------------- Git Hub Link -------------------------------
+
+https://github.com/in28minutes/devops-master-class
+
+--------------------------------------------------------
+
+
+
+DevOps :  Bring Teams Together (enhance communication between the 
+		                development and the operations)
+---------
+
+	(AWS) ->  DevOps is the combination of cultural philosophies, practices,
+and tools that increases an organization's ability to deliver applications and services 
+at high velocity.
+
+	DevOps is the outcome of applying the most trusted principles from the
+domain of physical manufacturing and leadership to the IT value stream.
+
+
+Agile :
+-------
+
+   Agile brought the business and the development teams together into one team.
+   This team worked to build great software in small iterations, called sprints,
+   instead of spending weeks or months on each phase of development.
+
+
+
+
+
+
+
+
