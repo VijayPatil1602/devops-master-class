@@ -1,0 +1,15 @@
+It is a continuous integration tools
+
+Jenkins allows you to create pipelines where you can run unit test, you can run
+integration tests, you can do code quality checks, and you can package your applications
+and deploy them.
+
+prerequisites :
+    Visual Studio code
+    Section: docker
+    Docker Compose
+
+
+instruction to setup jenkins docker images : 
+https://www.jenkins.io/doc/book/installing/docker/#on-macos-and-linux
+
