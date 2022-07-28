@@ -13,3 +13,28 @@ prerequisites :
 instruction to setup jenkins docker images : 
 https://www.jenkins.io/doc/book/installing/docker/#on-macos-and-linux
 
+stages {
+    stage('Checkout') {
+        steps {
+            sh 'mvn --version'
+            sh 'docker version'
+            echo "Build"
+            echo "PATH - $PATH"
+            echo "JOB_NAME - $env.JOB_NAME"
+            echo "BUILD_TAG - $env.BUILD_TAG"
+            echo "BUILD_URL - $env.BUILD_URL"
+        }
+    }
+
+    stage('Build') {
+        steps {
+            sh "mvn clean compile"
+        }
+    }
+
+    stage('Test') {
+        steps {
+            echo "Test"
+        }
+    }
+}
